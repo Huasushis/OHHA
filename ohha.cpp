@@ -6,9 +6,9 @@ using namespace std;
 namespace ohha
 {
   // MT19937
-  //bool isInit;
-  //int index;
-  //unsigned int MT[624];
+  bool isInit;
+  int index;
+  unsigned int MT[624];
   void srand(int seed)
   {
     index = 0;
@@ -44,11 +44,11 @@ namespace ohha
     index = (index + 1) % 624;
     return y;
   }
-  //unsigned long long length;
-  //std::ifstream fin;
-  //TernaryNumber OriginalNum;
-  //TernaryNumber son[10];
-  //bool haveadded;
+  unsigned long long length;
+  ifstream fin;
+  TernaryNumber OriginalNum;
+  TernaryNumber son[10];
+  bool haveadded;
   TernaryNumber::TernaryNumber() // init
   {
     f(i, 0, 162)
